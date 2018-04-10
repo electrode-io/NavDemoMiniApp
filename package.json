@@ -1,0 +1,22 @@
+{
+  "name": "nav-demo-miniapp",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "ern-showcase-navigation-api": "0.0.1",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.0",
+    "react-native-electrode-bridge": "1.5.10"
+  },
+  "ern": {
+    "version": "0.16.0",
+    "moduleType": "ern-miniapp",
+    "moduleName": "NavDemoMiniApp"
+  },
+  "keywords": [
+    "ern-miniapp"
+  ]
+}
