@@ -16,13 +16,6 @@ import {
 } from 'react-native';
 import { ShowcaseNavigationApi} from 'ern-showcase-navigation-api'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 
 export default class App extends Component<Props> {
   constructor(props) {
@@ -37,7 +30,7 @@ export default class App extends Component<Props> {
           selected:{}
         };
     this.state.data = [
-      {title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_a_screen"},
+      {title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_screen", payload: 0},
       {title: "Show Modal", isSelected: false, path:"ern/NavDemoMiniApp/show_modal"},
       {title: "Show Toast", isSelected: false, path:"ern/NavDemoMiniApp/show_toast"},
       {title: "Custom Button", isSelected: false, path:"ern/NavDemoMiniApp/custom_button"}
@@ -62,11 +55,14 @@ export default class App extends Component<Props> {
 
 _onPressRow (item) {
      item.isSelect = !item.isSelect
+     item.payload += 1
+     console.log(`about to pass payload: ${JSON.stringify(item.payload)}`)
      const route = {
        path: item.path,
        navBar: {
          title: item.title
        },
+       payload: JSON.stringify(item.payload)
      }
      ShowcaseNavigationApi.requests().navigate(route).catch(() => {
        console.log("Navigation failed.");
@@ -77,7 +73,7 @@ _onPressRow (item) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
+    marginTop: 0,
     padding: 5,
     backgroundColor: 'black'
   },
