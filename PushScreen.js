@@ -6,11 +6,13 @@ import {
   View
  } from 'react-native';
  import { ShowcaseNavigationApi} from 'ern-showcase-navigation-api'
+ import  App  from './App'
 
-export default class PushScreen extends Component {
+export default class PushScreen extends Component<Props> {
   constructor(props) {
     super(props)
     this._onPressButton = this._onPressButton.bind(this)
+    this._onPressPopToRoot = this._onPressPopToRoot.bind(this)
   }
 
   render() {
@@ -23,6 +25,11 @@ export default class PushScreen extends Component {
              onPress={this._onPressButton}
              title="Push Another Screen"
           />
+          <Button
+              style={styles.button}
+              onPress={this._onPressPopToRoot}
+              title="Pop To Root"
+          />
         </View>
         <View style={styles.textContainer}>
           <Text>Pushed Screen: {this.props.payload}</Text>
@@ -31,6 +38,24 @@ export default class PushScreen extends Component {
       </View>
 
     );
+  }
+
+  _onPressPopToRoot() {
+    console.log(`Pop to root clicked`)
+    const route = {
+      path: "ern/NavDemoMiniApp/push_screen",
+      popType: {
+        popToRoot: true
+      },
+      payload:"0"
+    }
+
+    ShowcaseNavigationApi.requests().navigate(route).then(() => {
+      console.log("Reset payload to zero")
+    }).catch((e) => {
+      console.log(`Pop to root failed because: ${e}`);
+    })
+
   }
 
   _onPressButton() {

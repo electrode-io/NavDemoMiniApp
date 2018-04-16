@@ -30,11 +30,12 @@ export default class App extends Component<Props> {
           selected:{}
         };
     this.state.data = [
-      {title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_screen", payload: 0},
+      {identifier: 0, title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_screen"},
       {title: "Show Modal", isSelected: false, path:"ern/NavDemoMiniApp/show_modal"},
       {title: "Show Toast", isSelected: false, path:"ern/NavDemoMiniApp/show_toast"},
       {title: "Custom Button", isSelected: false, path:"ern/NavDemoMiniApp/custom_button"}
     ];
+    this._handlePopToRoot = this._handlePopToRoot.bind(this)
   }
 
   render() {
@@ -51,20 +52,24 @@ export default class App extends Component<Props> {
         />
     );
   }
-
+_handlePopToRoot() {
+  console.log(`pop to root is handled`)
+  this.state.data[0].payload = 0
+}
 
 _onPressRow (item) {
      item.isSelect = !item.isSelect
-     item.payload += 1
-     console.log(`about to pass payload: ${JSON.stringify(item.payload)}`)
+     //console.log(`about to pass payload: ${JSON.stringify(item.payload)}`)
      const route = {
        path: item.path,
        navBar: {
          title: item.title
        },
-       payload: JSON.stringify(item.payload)
+       payload: "1"
      }
-     ShowcaseNavigationApi.requests().navigate(route).catch(() => {
+     ShowcaseNavigationApi.requests().navigate(route).then(() => {
+       
+     }).catch(() => {
        console.log("Navigation failed.");
      })
    }
