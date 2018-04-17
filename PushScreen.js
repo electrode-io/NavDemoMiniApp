@@ -43,7 +43,7 @@ export default class PushScreen extends Component<Props> {
   _onPressPopToRoot() {
     console.log(`Pop to root clicked`)
     const route = {
-      path: "ern/NavDemoMiniApp/push_screen",
+      path: "ern/NavDemoMiniApp",
       popType: {
         popToRoot: true
       },
