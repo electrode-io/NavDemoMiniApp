@@ -14,7 +14,6 @@ export default class ShowToast extends Component<Props> {
   }
 
   render() {
-    console.log(`Payload: ${this.props.payload}`)
     return (
       <View style={styles.container}>
           <Text>This is a modal screen. </Text>

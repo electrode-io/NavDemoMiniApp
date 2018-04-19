@@ -33,10 +33,11 @@ export default class App extends Component<Props> {
       {identifier: 0, title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_screen"},
       {title: "Show Modal", isSelected: false, path:"ern/NavDemoMiniApp/show_modal"},
       {title: "Show Toast", isSelected: false, path:"ern/NavDemoMiniApp/show_toast"},
-      {title: "Custom Button", isSelected: false, path:"ern/NavDemoMiniApp/custom_button"}
+      {title: "Custom Button", isSelected: false, path:"ern/NavDemoMiniApp/custom_buttons"}
     ];
     this._handlePopToRoot = this._handlePopToRoot.bind(this)
   }
+
 
   render() {
     return (
@@ -57,18 +58,24 @@ _handlePopToRoot() {
   this.state.data[0].payload = 0
 }
 
+
 _onPressRow (item) {
      item.isSelect = !item.isSelect
-     //console.log(`about to pass payload: ${JSON.stringify(item.payload)}`)
      const route = {
        path: item.path,
        navBar: {
-         title: item.title
+         title: item.title,
+         rightButtons: [
+             {
+               name: "CutomButton",
+               identifier: "rightButtonIdentifier"
+             }
+         ]
        },
        payload: "1"
      }
      ShowcaseNavigationApi.requests().navigate(route).then(() => {
-       
+
      }).catch(() => {
        console.log("Navigation failed.");
      })

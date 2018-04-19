@@ -6,7 +6,6 @@ import {
   View
  } from 'react-native';
  import { ShowcaseNavigationApi} from 'ern-showcase-navigation-api'
- import  App  from './App'
 
 export default class CustomButtons extends Component<Props> {
   constructor(props) {
@@ -16,7 +15,7 @@ export default class CustomButtons extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-          <Text>This is a modal screen. </Text>
+          <Text>This is cutstom button screen. </Text>
       </View>
 
     );
