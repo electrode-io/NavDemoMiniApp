@@ -50,7 +50,7 @@ export default class PushScreen extends Component<Props> {
       payload:"0"
     }
 
-    ShowcaseNavigationApi.requests().navigate(route).then(() => {
+    ErnNavigationApi.requests().navigate(route).then(() => {
       console.log("Reset payload to zero")
     }).catch((e) => {
       console.log(`Pop to root failed because: ${e}`);
@@ -65,7 +65,7 @@ export default class PushScreen extends Component<Props> {
       path: "ern/NavDemoMiniApp/push_screen",
       payload: JSON.stringify(screenNumber+1)
     }
-    ShowcaseNavigationApi.requests().navigate(route).catch(() => {
+    ErnNavigationApi.requests().navigate(route).catch(() => {
       console.log("Navigation failed.");
     })
   }
