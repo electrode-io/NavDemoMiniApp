@@ -3423,7 +3423,14 @@ react-devtools-core@3.1.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-electrode-bridge@1.5.15, react-native-electrode-bridge@1.5.x:
+react-native-electrode-bridge@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/react-native-electrode-bridge/-/react-native-electrode-bridge-1.5.10.tgz#ee8d14ee423cc52abcc38f24f5241e2b07e61bce"
+  dependencies:
+    events "^1.1.1"
+    uuid "^3.0.0"
+
+react-native-electrode-bridge@1.5.x:
   version "1.5.15"
   resolved "https://registry.yarnpkg.com/react-native-electrode-bridge/-/react-native-electrode-bridge-1.5.15.tgz#8a2079641f3dc01d639965dd653378411b207d7d"
   dependencies:
@@ -3511,9 +3518,9 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@^16.3.0-alpha.1:
-  version "16.3.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
+react@16.3.0-alpha.1:
+  version "16.3.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.3.0-alpha.1.tgz#de20f646e31e8b3c004e6bcbd3c54d51b48e1120"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
