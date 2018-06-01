@@ -30,10 +30,10 @@ export default class App extends Component<Props> {
           selected:{}
         };
     this.state.data = [
-      {identifier: 0, title: "Push a screen", isSelected: false, path: "ern/NavDemoMiniApp/push_screen"},
-      {title: "Show Modal", isSelected: false, path:"ern/NavDemoMiniApp/show_modal"},
-      {title: "Show Toast", isSelected: false, path:"ern/NavDemoMiniApp/show_toast"},
-      {title: "Custom Button", isSelected: false, path:"ern/NavDemoMiniApp/custom_buttons"}
+      {identifier: 0, title: "Push a screen", isSelected: false, path: "NavDemoMiniApp/push_screen"},
+      {title: "Show Modal", isSelected: false, path:"NavDemoMiniApp/show_modal"},
+      {title: "Show Toast", isSelected: false, path:"NavDemoMiniApp/show_toast"},
+      {title: "Custom Button", isSelected: false, path:"NavDemoMiniApp/custom_buttons"}
     ];
     this._handlePopToRoot = this._handlePopToRoot.bind(this)
   }
