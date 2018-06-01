@@ -10,4 +10,4 @@ AppRegistry.registerComponent('NavDemoMiniApp', () => App);
 AppRegistry.registerComponent('NavDemoMiniApp/push_screen', () => PushScreen);
 AppRegistry.registerComponent('NavDemoMiniApp/show_modal', () => ShowModal);
 AppRegistry.registerComponent('NavDemoMiniApp/show_toast', () => ShowToast);
-AppRegistry.registerComponent('NavDemoMiniApp/custom_button', () => CustomButtons);
+AppRegistry.registerComponent('NavDemoMiniApp/custom_buttons', () => CustomButtons);
