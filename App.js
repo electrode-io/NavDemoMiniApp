@@ -14,7 +14,7 @@ import {
   ListItem,
   TouchableHighlight
 } from 'react-native';
-import { ShowcaseNavigationApi} from 'ern-showcase-navigation-api'
+import { ErnNavigationApi} from 'ern-showcase-navigation-api'
 
 
 export default class App extends Component<Props> {
@@ -74,7 +74,7 @@ _onPressRow (item) {
        },
        payload: "1"
      }
-     ShowcaseNavigationApi.requests().navigate(route).then(() => {
+     ErnNavigationApi.requests().navigate(route).then(() => {
 
      }).catch(() => {
        console.log("Navigation failed.");
