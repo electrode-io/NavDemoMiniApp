@@ -1636,9 +1636,9 @@ envinfo@^3.0.0:
     os-name "^2.0.1"
     which "^1.2.14"
 
-ern-showcase-navigation-api@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ern-showcase-navigation-api/-/ern-showcase-navigation-api-0.0.2.tgz#b150c7c062370cc71b2326ff8edb8cc716433a3f"
+ern-showcase-navigation-api@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ern-showcase-navigation-api/-/ern-showcase-navigation-api-0.0.3.tgz#612d436d05f2b5349089310e6e90d537150d5e74"
   dependencies:
     react-native-electrode-bridge "1.5.x"
 
