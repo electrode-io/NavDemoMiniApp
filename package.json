@@ -9,7 +9,7 @@
     "ern-showcase-navigation-api": "0.0.3",
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-electrode-bridge": "1.5.10"
+    "react-native-electrode-bridge": "1.5.23"
   },
   "ern": {
     "version": "0.16.1",
